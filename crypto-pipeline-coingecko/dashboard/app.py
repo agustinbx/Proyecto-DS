@@ -3,6 +3,10 @@ import pandas as pd
 import streamlit as st
 from datetime import date, timedelta
 
+#Streamlit es una librería que transforma un script de Python en una aplicación web interactiva.
+#No trae dashboards “prediseñados” como tal.
+#Lo que hacés es usar funciones de Streamlit (st.title, st.line_chart, st.dataframe, etc.) para armar tu propia interfaz.
+
 st.set_page_config(page_title="Crypto Dashboard", layout="wide")
 
 @st.cache_data(ttl=300)
@@ -30,7 +34,7 @@ def load_time_series(conn_path, coin, start_day, end_day):
     return df
 
 def main():
-    st.title("📈 Crypto Dashboard — CoinGecko")
+    st.title("📈 Crypto Dashboard")
     conn_path = st.text_input("Ruta SQLite", "./crypto.db")
     if not conn_path:
         st.stop()

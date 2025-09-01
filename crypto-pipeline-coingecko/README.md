@@ -24,3 +24,10 @@ Proyecto práctico de **Ciencia de Datos / Ingeniería de Datos** que implementa
 ---
 
 ## 📂 Estructura del proyecto
+
+## python
+## import sqlite3, pandas as pd
+## conn = sqlite3.connect("crypto.db")
+## print(pd.read_sql("SELECT coin_id, COUNT(*) as n FROM price_history GROUP BY coin_id;", conn))
+
+## streamlit run dashboard/app.py
